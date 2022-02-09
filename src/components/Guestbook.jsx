@@ -11,6 +11,7 @@ export default function Guestbook() {
       <label className="textarea">
         <textarea placeholder="entry" />
       </label>
+      <button>sign</button>
     </div>
   );
 }
