@@ -1,10 +1,10 @@
 import './App.css';
-import { UserProvider } from './context/userContext';
+import Home from './views/Home';
 
 function App() {
   return (
     <div>
-      <UserProvider></UserProvider>
+      <Home />
     </div>
   );
 }

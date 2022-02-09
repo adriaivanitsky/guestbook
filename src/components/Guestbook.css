@@ -1,0 +1,13 @@
+.maindiv {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 40px;
+}
+
+h1 {
+  color: rgba(221, 140, 18, 0.897);
+  filter: drop-shadow(2px 2px white);
+}
