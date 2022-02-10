@@ -5,7 +5,7 @@ import { useUser } from '../context/UserContext';
 
 export default function Guestbook() {
   const { entry, setEntry } = useEntry();
-  const { user, setUser } = useUser();
+  const { setUser } = useUser();
   const [name, setName] = useState('');
   const [message, setMessage] = useState('');
 
@@ -20,6 +20,7 @@ export default function Guestbook() {
     <div className="maindiv">
       <h1>Sign the guestbook!</h1>
       <label className="input">
+        <h3>name:</h3>
         <input
           type="text"
           value={name}
@@ -28,6 +29,7 @@ export default function Guestbook() {
         />
       </label>
       <label className="textarea">
+        <h3>message:</h3>
         <textarea
           placeholder="entry"
           value={message}

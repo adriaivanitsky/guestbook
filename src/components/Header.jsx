@@ -1,5 +1,6 @@
 import React from 'react';
 import { useUser } from '../context/UserContext';
+import '../components/Header.css';
 
 export default function Header() {
   const { user } = useUser();
