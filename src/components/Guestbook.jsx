@@ -1,14 +1,17 @@
 import { useState } from 'react';
 import { useEntry } from '../context/EntryContext';
 import './Guestbook.css';
+import { useUser } from '../context/UserContext';
 
 export default function Guestbook() {
   const { entry, setEntry } = useEntry();
+  const { user, setUser } = useUser();
   const [name, setName] = useState('');
   const [message, setMessage] = useState('');
 
   const handleClick = () => {
     setEntry([...entry, { name, message }]);
+    setUser(name);
     setName('');
     setMessage('');
   };
