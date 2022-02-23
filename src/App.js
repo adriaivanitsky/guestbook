@@ -2,6 +2,8 @@ import './App.css';
 import Home from './views/Home';
 import Header from './components/Header';
 import { useDarkMode } from './context/DarkModeContext';
+import Login from './views/Login';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
 function App() {
   const { darkMode } = useDarkMode();
@@ -9,10 +11,19 @@ function App() {
   if (darkMode) theme = 'dark';
   else theme = 'light';
   return (
-    <div className={theme}>
-      <Header />
-      <Home />
-    </div>
+    <BrowserRouter>
+      <div className={theme}>
+        <Header />
+        <Switch>
+          <Route exact path="/">
+            <Home />
+          </Route>
+          <Route path="/login">
+            <Login />
+          </Route>
+        </Switch>
+      </div>
+    </BrowserRouter>
   );
 }
 
