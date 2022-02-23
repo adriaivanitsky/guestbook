@@ -1,16 +1,18 @@
 import './App.css';
 import Home from './views/Home';
 import Header from './components/Header';
-import { DarkModeProvider } from './context/DarkModeContext';
+import { useDarkMode } from './context/DarkModeContext';
 
 function App() {
+  const { darkMode } = useDarkMode();
+  let theme;
+  if (darkMode) theme = 'dark';
+  else theme = 'light';
   return (
-    <DarkModeProvider>
-      <div>
-        <Header />
-        <Home />
-      </div>
-    </DarkModeProvider>
+    <div className={theme}>
+      <Header />
+      <Home />
+    </div>
   );
 }
 

@@ -4,12 +4,15 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { UserProvider } from './context/UserContext';
+import { DarkModeProvider } from './context/DarkModeContext';
 
 ReactDOM.render(
   <React.StrictMode>
-    <UserProvider>
-      <App />
-    </UserProvider>
+    <DarkModeProvider>
+      <UserProvider>
+        <App />
+      </UserProvider>
+    </DarkModeProvider>
   </React.StrictMode>,
   document.getElementById('root')
 );

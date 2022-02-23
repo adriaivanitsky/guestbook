@@ -5,12 +5,11 @@ export const DarkModeContext = createContext();
 const DarkModeProvider = ({ children }) => {
   const darkModeEnabled = localStorage.getItem('dark-mode-enabled');
   const [darkMode, setDarkMode] = useState(() => {
-    if (darkModeEnabled) return true;
-    else return false;
+    if (darkModeEnabled === true) return true;
   });
 
   const toggle = () => {
-    if (!darkModeEnabled) {
+    if (!darkMode) {
       localStorage.setItem('dark-mode-enabled', true);
       setDarkMode(true);
     } else {
