@@ -1,7 +1,9 @@
-.App {
+.light {
   text-align: center;
+  background-color: rgba(255, 218, 185, 0.829);
 }
 
-body {
-  background-color: rgba(255, 218, 185, 0.829);
+.dark {
+  text-align: center;
+  background-color: rgba(99, 48, 4, 0.829);
 }
