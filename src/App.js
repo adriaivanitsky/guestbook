@@ -15,11 +15,11 @@ function App() {
       <div className={theme}>
         <Header />
         <Switch>
-          <Route exact path="/">
-            <Home />
-          </Route>
           <Route path="/login">
             <Login />
+          </Route>
+          <Route exact path="/">
+            <Home />
           </Route>
         </Switch>
       </div>
